@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>A Neural Net</title>
+	<link rel="icon" href="icon.png">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/projects.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Pangolin|Roboto|Bahiana|Caveat+Brush|Orbitron" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/rotate.js"></script>
+</head> 
+<body>
+<div class="go_to_home">
+	<a href="../" title="Home"><img src="../home.png" width=25></a>
+</div>
+<div class="middle">
+<div class="welcome_cifar">
+<!-- ######################################################################################################### -->
+	<b><span class="header_cifar" id="header">"VERSION 4.00"</span></b><br>
+	<span class="credit_cifar" id="talk"><i>I'm a convolutional neural net.<br>Trust me, I can think.</i></span>
+	<br><br><br>
+	
+	<table align=center width=675px><tr>
+	<td width=40%>
+		<div class="helper_off" id="hp1">
+			You give me a <b>REAL image</b>.<br>
+			I will tell you what it is.<br>
+			It <b>MUST</b> be 1 in <b>10</b> classes.<br>
+			Accuracy 88% in lastest test.<br>
+			<b>If I don't know the answer,<br>
+			I'll just throw a random result.<br></b>
+		</div>
+	</td><td width=10% style="vertical-align: top" id="loading">
+		<img src="symbol.png" height=100px class="helper_symbol" id="helper" onmouseenter="start_spin()" onmouseleave="stop_spin()">
+	</td><td width=40%>
+		<div class="helper_off" id="hp2">
+			<b><i>Available classes :</i></b><br>
+			airplane, bird,<br>
+			car, cat,<br>
+			deer, dog,<br>
+			frog, horse<br>
+			ship, truck.
+		</div>
+	</td></tr></table>
+	<br><br>
+	<form action='classify' method='post' enctype='multipart/form-data' id="form">
+		<div>
+			<input type="text" name="url" class="textbox" size=50 id="url" placeholder="IMAGE URL">
+			<input type='file' name='file' style="display:none" id="file" accept="image/*"/>
+			<label for="file" class="browse">
+				<img src="file.png" height=40 class="browse_icon" title="Browse computer">
+			</label>
+		</div>
+		<span class="LMGTFU">
+			<a href="https://www.google.com/search?q=how+to+get+image+url" target="_blank">You don't know how to get image URL ?</a>
+		</span>
+		<br><br>
+		<script>
+			document.getElementById("url").select();
+		</script><br>
+		<input type='submit' name='upload' value='Tell me now !' class="submit_cifar"/>
+		<br>
+	</form>
+	<!-- <button id="test">Hit me</button> -->
+<!-- ######################################################################################################### -->
+</div></div>
+<div class="network">
+	<div id="large-header" class="large-header"></div>
+	<canvas  id="canvas"></canvas>
+	<script src="../background/js/TweenLite.min.js"></script>
+	<script src="../background/js/EasePack.min.js"></script>
+	<script src="../background/js/background.js"></script>
+	<script src="js/javascript.js"></script>
+</div>
+</body>
+</html>

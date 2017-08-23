@@ -1,0 +1,119 @@
+.welcome_cifar {
+/* 	border:5px solid black;
+	border-radius: 50px;
+	background-color: #E1F5FE;*/
+	height: 700px;
+	/* width: 1000px; */
+}
+.header_cifar {
+	width:100%;
+	font-size:70px;
+	/*font-family:Orbitron;*/
+	color: #E3F2FD;
+	text-shadow: -1px -1px black, 1px -1px black, -1px 1px black, 1px 1px black;
+}
+.credit_cifar {
+	font-size:18px;
+	color: #FAFAFA;
+    transition: all 0.5s ease;
+	text-shadow: -1px -1px black, 1px -1px black, -1px 1px black, 1px 1px black;
+}
+.helper_symbol {
+	/* cursor:pointer; */
+}
+.helper_off,.helper_on {
+	border:1px solid black;
+	border-radius: 15px;
+	padding:20px;
+	background: #FFC107/*EF5350*/;
+	z-index:2;
+	transition: all 0.5s ease;
+	overflow: hidden;
+	font-family:Pangolin;
+	font-size: 17px;
+}
+.helper_on {
+	opacity: 1;
+	height: 130px;
+}
+.helper_off {
+	opacity: 0;
+	height:0px;
+}
+.textbox {
+	font-size: 20px;
+	padding: 10px;
+	border:2px solid black;
+	margin-bottom:10px;
+}
+.browse {
+	position:absolute;
+	margin-left:10px;
+}
+.browse_icon {
+	cursor:pointer;
+	transition: all 0.5s ease;
+}
+.browse_icon:hover {
+	filter:invert(100%);
+}
+.LMGTFU a {
+	margin-top:300px;
+	text-decoration:none;
+	color:#000000;
+    font-weight: bold;
+	/*text-shadow: -1px -1px black, 1px -1px black, -1px 1px black, 1px 1px black;*/
+}
+.submit_cifar {
+	/*width:100%;*/
+	/*height:50px;*/
+	padding:10px;
+	/*font-family:Bahiana;*/
+	font-family:Orbitron;
+	font-size:20px;
+	border-radius: 5px;
+	border: 3px solid white;
+	cursor:pointer;
+	background-color: #F57C00;
+	transition: all 0.25s ease;
+	filter: invert(100%);
+}
+.submit_cifar:hover {
+	/*width:250px;*/
+	/*height: 75px;*/
+	font-size:25px;
+	filter: invert(0%);
+	/*border: 3px solid black;*/
+}
+.back_cifar {
+	font-family:Orbitron;
+	font-size:20px;
+	border-radius: 15px;
+	border: 3px solid white;
+	cursor:pointer;
+	background-color: #F57C00;
+	transition: all 0.5s ease;
+	filter: invert(100%);
+	padding: 10px 10px;
+	text-decoration:none;
+}
+.back_cifar:hover {
+	font-size:25px;
+	filter: invert(0%);
+	border: 3px solid black;
+}
+.result_img {
+	border:2px solid black;
+	border-radius:5px;
+	cursor:pointer;
+}
+body {
+	overflow:hidden;
+    vertical-align: middle;
+    background-image: url("../bg.jpg");
+    /*background-size: 100% auto;*/
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
