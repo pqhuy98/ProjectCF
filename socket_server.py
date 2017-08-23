@@ -55,17 +55,20 @@ model = load_model("net.h5")
 
 def get_result(path) :
     print "Rescaling image",path
-    img = crop_and_resize(path)
-    img = np.transpose(img,axes=(2,0,1)).astype("float32")
-    img/=255
-    res = ""
-    print "Feed forward..."
-    pred = model.predict(np.array([img]))
-    print labels[np.argmax(pred)]
-    for i in range(pred.shape[1]) :
-        x = pred[0,i]
-        res+=str(round(x,3))+" "
-    return res[:-1]
+    try :
+        img = crop_and_resize(path)
+        img = np.transpose(img,axes=(2,0,1)).astype("float32")
+        img/=255
+        res = ""
+        print "Feed forward..."
+        pred = model.predict(np.array([img]))
+        print labels[np.argmax(pred)]
+        for i in range(pred.shape[1]) :
+            x = pred[0,i]
+            res+=str(round(x,3))+" "
+        return res[:-1]
+    except :
+        return "-1"
 
 def solve(sock) :
     path = sock.recv(1000000)
